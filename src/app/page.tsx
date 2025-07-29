@@ -19,26 +19,26 @@ export default function Home() {
   const carouselItems = [
     {
       src: 'https://placehold.co/1600x800',
-      'data-ai-hint': 'modern office interior',
-      alt: 'Modern office interior',
-      title: 'Innovative Solutions',
-      subtitle: 'Driving progress with cutting-edge technology.',
+      'data-ai-hint': 'tractor in field',
+      alt: 'Tractor plowing a field at sunset',
+      title: 'Powering Modern Agriculture',
+      subtitle: 'Reliable machinery for today\'s farming challenges.',
       href: '/products',
     },
     {
       src: 'https://placehold.co/1600x800',
-      'data-ai-hint': 'team collaborating meeting',
-      alt: 'Team collaborating in a meeting',
-      title: 'Expert Collaboration',
-      subtitle: 'Partner with us to achieve your business goals.',
+      'data-ai-hint': 'irrigation system crops',
+      alt: 'Automated irrigation system watering crops',
+      title: 'Efficient Irrigation Solutions',
+      subtitle: 'Maximize your yield with our smart watering systems.',
       href: '/products',
     },
     {
       src: 'https://placehold.co/1600x800',
-      'data-ai-hint': 'cityscape at dusk',
-      alt: 'Cityscape at dusk',
-      title: 'Global Reach',
-      subtitle: 'Expanding horizons with our worldwide presence.',
+      'data-ai-hint': 'farmer holding soil',
+      alt: 'Farmer inspecting soil quality',
+      title: 'Sustainable Farming Supplies',
+      subtitle: 'Nourish your land with our eco-friendly products.',
       href: '/products',
     },
   ];
@@ -58,7 +58,7 @@ export default function Home() {
                   data-ai-hint={item['data-ai-hint']}
                   priority={index === 0}
                 />
-                <div className="absolute inset-0 bg-black/50" />
+                <div className="absolute inset-0 bg-green-950/50 backdrop-blur-sm" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4">
                   <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-shadow-lg">
                     {item.title}
@@ -67,7 +67,7 @@ export default function Home() {
                     {item.subtitle}
                   </p>
                   <Button asChild className="mt-8" size="lg" variant="default">
-                    <Link href={item.href}>Explore Now</Link>
+                    <Link href={item.href}>Explore Our Products</Link>
                   </Button>
                 </div>
               </CarouselItem>
@@ -81,10 +81,10 @@ export default function Home() {
       <section className="container mx-auto px-4">
         <div className="text-center">
           <h2 className="font-headline text-3xl md:text-4xl font-bold">
-            Featured Products
+            Featured Equipment
           </h2>
           <p className="mt-2 text-lg text-muted-foreground">
-            Top-tier products to elevate your business.
+            Top-tier machinery to enhance your productivity.
           </p>
         </div>
 
@@ -97,7 +97,7 @@ export default function Home() {
         <div className="mt-12 text-center">
             <Button asChild size="lg" variant="outline">
                 <Link href="/products">
-                    View All Products
+                    View All Equipment
                     <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
             </Button>

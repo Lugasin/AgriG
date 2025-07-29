@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { MountainIcon } from 'lucide-react';
+import { Leaf } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Search } from 'lucide-react';
@@ -33,8 +33,8 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <Link href="/" className="mr-6 flex items-center gap-2">
-          <MountainIcon className="h-8 w-8 text-primary" />
-          <span className="font-headline text-2xl font-bold">Massrides</span>
+          <Leaf className="h-8 w-8 text-primary" />
+          <span className="font-headline text-2xl font-bold">AgriSupply Co.</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
           {navItems.map((item) => (
@@ -55,7 +55,7 @@ export function Header() {
               <Input
                 type="search"
                 name="query"
-                placeholder="AI Search for products..."
+                placeholder="AI Search for equipment..."
                 className="pl-10 h-9"
               />
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
