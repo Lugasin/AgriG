@@ -25,7 +25,7 @@ export function ProductCard({ product }: ProductCardProps) {
   };
   
   return (
-    <Card className="group overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-xl animate-fade-in">
+    <Card className="group overflow-hidden rounded-lg shadow-md transition-shadow hover:shadow-xl">
       <CardContent className="p-0">
         <Link href={`/products/${product.id}`}>
           <div className="relative h-56 w-full">
@@ -33,17 +33,9 @@ export function ProductCard({ product }: ProductCardProps) {
               src={product.images[0]}
               alt={product.name}
               fill
-              className="object-cover transition-opacity duration-300 group-hover:opacity-0"
+              className="object-cover transition-transform duration-500 group-hover:scale-110"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               data-ai-hint="product image"
-            />
-            <Image
-              src={product.images[1]}
-              alt={`${product.name} lifestyle`}
-              fill
-              className="object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-              data-ai-hint="product context"
             />
           </div>
         </Link>

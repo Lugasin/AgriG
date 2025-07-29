@@ -46,7 +46,9 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-12 md:gap-16 lg:gap-20">
       <section className="relative w-full h-[60vh] md:h-[80vh]">
-        <Carousel className="w-full h-full" opts={{ loop: true }}>
+        <Carousel className="w-full h-full" opts={{ loop: true }} plugins={[
+            require('embla-carousel-autoplay')({ delay: 5000 }),
+        ]}>
           <CarouselContent className="h-full">
             {carouselItems.map((item, index) => (
               <CarouselItem key={index} className="relative h-full">
@@ -54,12 +56,12 @@ export default function Home() {
                   src={item.src}
                   alt={item.alt}
                   fill
-                  className="object-cover animate-fade-in"
+                  className="object-cover animate-kenburns"
                   data-ai-hint={item['data-ai-hint']}
                   priority={index === 0}
                 />
-                <div className="absolute inset-0 bg-green-950/50 backdrop-blur-sm" />
-                <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4">
+                <div className="absolute inset-0 bg-green-950/50" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4 animate-fade-in-up">
                   <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-shadow-lg">
                     {item.title}
                   </h1>
@@ -79,7 +81,7 @@ export default function Home() {
       </section>
 
       <section className="container mx-auto px-4">
-        <div className="text-center">
+        <div className="text-center animate-fade-in-up">
           <h2 className="font-headline text-3xl md:text-4xl font-bold">
             Featured Equipment
           </h2>
@@ -89,12 +91,14 @@ export default function Home() {
         </div>
 
         <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {featuredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
+          {featuredProducts.map((product, i) => (
+            <div key={product.id} className="animate-fade-in-up" style={{ animationDelay: `${i * 100}ms`}}>
+              <ProductCard product={product} />
+            </div>
           ))}
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-12 text-center animate-fade-in-up">
             <Button asChild size="lg" variant="outline">
                 <Link href="/products">
                     View All Equipment

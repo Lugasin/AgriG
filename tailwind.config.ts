@@ -89,11 +89,27 @@ export default {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+        'fade-in-up': {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'kenburns': {
+            '0%': { transform: 'scale(1) translateY(0)',},
+            '100%': { transform: 'scale(1.1) translateY(-15px)'}
+        },
+        'parallax': {
+            'from': { backgroundPositionY: '0%' },
+            'to': { backgroundPositionY: '100%' }
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'fade-in': 'fade-in 0.5s ease-in-out',
+        'fade-in': 'fade-in 0.5s ease-in-out forwards',
+        'fade-in-up': 'fade-in-up 0.6s ease-in-out forwards',
+        'kenburns': 'kenburns 7s ease-out forwards',
+        'parallax': 'parallax linear forwards',
+        'parallax-fast': 'parallax linear forwards',
       },
       textShadow: {
         DEFAULT: '0 2px 4px rgba(0, 0, 0, 0.10)',
@@ -103,6 +119,7 @@ export default {
   },
   plugins: [
     require('tailwindcss-animate'),
+    require('embla-carousel-autoplay'),
     function({ addUtilities, theme }: {addUtilities: Function, theme: Function}) {
       const newUtilities = {
         '.text-shadow': {

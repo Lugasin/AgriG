@@ -32,13 +32,13 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-        <div>
+        <div className="animate-fade-in">
           <div className="relative aspect-video w-full overflow-hidden rounded-lg shadow-lg">
             <Image
               src={product.images[activeImage]}
               alt={`${product.name} image ${activeImage + 1}`}
               fill
-              className="object-cover animate-fade-in"
+              className="object-cover transition-all duration-500 hover:scale-105"
               sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
@@ -61,7 +61,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
           </div>
         </div>
         
-        <div className="py-4">
+        <div className="py-4 animate-fade-in-up">
           <p className="text-sm font-medium text-primary">{product.category}</p>
           <h1 className="font-headline text-3xl md:text-4xl font-bold mt-1">{product.name}</h1>
           <p className="mt-4 text-lg text-muted-foreground">{product.description}</p>

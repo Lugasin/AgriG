@@ -12,19 +12,21 @@ export default function ProductsPage() {
           src="https://placehold.co/1200x400" 
           alt="A wide farm field under a blue sky" 
           fill 
-          className="object-cover"
+          className="object-cover animate-parallax"
           data-ai-hint="farm field sky"
         />
-        <div className="absolute inset-0 bg-green-950/50 backdrop-blur-sm" />
-        <div className="relative">
+        <div className="absolute inset-0 bg-green-950/50" />
+        <div className="relative animate-fade-in-up">
           <h1 className="font-headline text-4xl md:text-5xl font-bold text-white text-shadow-lg">Our Equipment Catalog</h1>
           <p className="mt-2 text-lg text-white/90 text-shadow">The finest equipment and supplies for your farm.</p>
         </div>
       </div>
       
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
+        {products.map((product, i) => (
+          <div key={product.id} className="animate-fade-in-up" style={{ animationDelay: `${i * 100}ms`}}>
+            <ProductCard product={product} />
+          </div>
         ))}
       </div>
     </div>
