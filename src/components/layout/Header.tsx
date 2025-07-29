@@ -2,13 +2,20 @@
 
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
-import { Leaf } from 'lucide-react';
+import { Leaf, User } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { CartIcon } from '../cart/CartIcon';
 import { FormEvent } from 'react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  DropdownMenuSeparator,
+} from '@/components/ui/dropdown-menu';
 
 export function Header() {
   const pathname = usePathname();
@@ -17,6 +24,7 @@ export function Header() {
   const navItems = [
     { href: '/', label: 'Home' },
     { href: '/products', label: 'Products' },
+    { href: '/about', label: 'About Us' },
   ];
 
   const handleSearch = (e: FormEvent<HTMLFormElement>) => {
@@ -50,8 +58,8 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <div className="flex flex-1 items-center justify-end gap-4">
-            <form onSubmit={handleSearch} className="relative hidden lg:block w-full max-w-sm">
+        <div className="flex flex-1 items-center justify-end gap-2">
+            <form onSubmit={handleSearch} className="relative hidden lg:block w-full max-w-xs">
               <Input
                 type="search"
                 name="query"
@@ -61,6 +69,22 @@ export function Header() {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             </form>
           <CartIcon />
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="icon">
+                <User className="h-5 w-5" />
+                <span className="sr-only">User Menu</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem asChild>
+                <Link href="/login">Login</Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/signup">Sign Up</Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
     </header>
