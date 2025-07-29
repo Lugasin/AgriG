@@ -15,27 +15,35 @@ import Autoplay from "embla-carousel-autoplay"
 export function HomeCarousel() {
   const carouselItems = [
     {
-      src: 'https://placehold.co/1600x800',
-      'data-ai-hint': 'tractor in field',
-      alt: 'Tractor plowing a field at sunset',
-      title: 'Powering Modern Agriculture',
-      subtitle: 'Reliable machinery for today\'s farming challenges.',
+      src: '/src/Assets/combine-harvester-working-field.jpg',
+      'data-ai-hint': 'combine harvester working field',
+      alt: 'Combine harvester working in a field',
+      title: 'Efficient Harvesting Solutions',
+      subtitle: 'Maximize your yield with our powerful harvesters.',
       href: '/products',
     },
     {
-      src: 'https://placehold.co/1600x800',
-      'data-ai-hint': 'irrigation system crops',
-      alt: 'Automated irrigation system watering crops',
-      title: 'Efficient Irrigation Solutions',
-      subtitle: 'Maximize your yield with our smart watering systems.',
+      src: '/src/Assets/tractor-working-green-field.jpg',
+      'data-ai-hint': 'tractor working green field',
+      alt: 'Tractor working in a green field',
+      title: 'Reliable Tractors for Every Task',
+      subtitle: "Find the perfect tractor for your farm's needs.", // Corrected apostrophe using double quotes
       href: '/products',
     },
     {
-      src: 'https://placehold.co/1600x800',
-      'data-ai-hint': 'farmer holding soil',
-      alt: 'Farmer inspecting soil quality',
-      title: 'Sustainable Farming Supplies',
-      subtitle: 'Nourish your land with our eco-friendly products.',
+      src: '/src/Assets/corn-field-sunset.jpg',
+      'data-ai-hint': 'corn field sunset',
+      alt: 'Corn field at sunset',
+      title: 'Quality Supplies for Healthy Crops',
+      subtitle: 'Everything you need for a successful growing season.',
+      href: '/products',
+    },
+     {
+      src: '/src/Assets/Maizesprinklers.png',
+      'data-ai-hint': 'Maize sprinklers',
+      alt: 'Maize field with sprinklers',
+      title: 'Advanced Irrigation Systems',
+      subtitle: 'Water your crops efficiently and effectively.',
       href: '/products',
     },
   ];
@@ -67,7 +75,7 @@ export function HomeCarousel() {
                 <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-shadow-lg">
                   {item.title}
                 </h1>
-                <p className="mt-4 max-w-2xl text-lg md:text-xl text-shadow">
+                <p className="mt-4 max-w-2xl text-lg md::text-xl text-shadow">
                   {item.subtitle}
                 </p>
                 <Button asChild className="mt-8" size="lg" variant="default">
@@ -83,3 +91,5 @@ export function HomeCarousel() {
     </section>
   )
 }
+
+export default HomeCarousel; // Added default export

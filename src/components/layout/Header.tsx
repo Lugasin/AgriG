@@ -23,8 +23,9 @@ export function Header() {
 
   const navItems = [
     { href: '/', label: 'Home' },
-    { href: '/products', label: 'Products' },
+    { href: '/products', label: 'Catalog' }, // Renamed from Products to Catalog
     { href: '/about', label: 'About Us' },
+    { href: '/checkout', label: 'Checkout' }, // Added Checkout link
   ];
 
   const handleSearch = (e: FormEvent<HTMLFormElement>) => {
@@ -77,6 +78,9 @@ export function Header() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
+              <DropdownMenuItem asChild>
+                <Link href="/profile">Profile</Link> {/* Added Profile link */}
+              </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <Link href="/login">Login</Link>
               </DropdownMenuItem>

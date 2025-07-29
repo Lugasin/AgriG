@@ -11,6 +11,7 @@ import { useCart } from '@/lib/cart';
 import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/navigation';
 import { Separator } from '@/components/ui/separator';
+import { useEffect, useState } from 'react'; // Import useEffect and useState
 
 const checkoutSchema = z.object({
   fullName: z.string().min(2, { message: "Full name is required." }),
@@ -18,17 +19,40 @@ const checkoutSchema = z.object({
   address: z.string().min(5, { message: "Address is required." }),
   city: z.string().min(2, { message: "City is required." }),
   state: z.string().min(2, { message: "State is required." }),
-  zip: z.string().regex(/^\d{5}$/, { message: "Invalid ZIP code." }),
+  zip: z.string().regex(/^d{5}$/, { message: "Invalid ZIP code." }),
   cardName: z.string().min(2, { message: "Name on card is required." }),
-  cardNumber: z.string().regex(/^\d{16}$/, { message: "Invalid card number." }),
-  cardExp: z.string().regex(/^(0[1-9]|1[0-2])\/\d{2}$/, { message: "Invalid format (MM/YY)." }),
-  cardCvc: z.string().regex(/^\d{3,4}$/, { message: "Invalid CVC." }),
+  cardNumber: z.string().regex(/^d{16}$/, { message: "Invalid card number." }),
+  cardExp: z.string().regex(/^(0[1-9]|1[0-2])/d{2}$/, { message: "Invalid format (MM/YY)." }),
+  cardCvc: z.string().regex(/^d{3,4}$/, { message: "Invalid CVC." }),
 });
 
 export default function CheckoutPage() {
   const { state, getCartTotal, clearCart } = useCart();
   const { toast } = useToast();
   const router = useRouter();
+
+  // Placeholder for authentication status
+  const [isAuthenticated, setIsAuthenticated] = useState(false); // Replace with actual auth check
+
+  useEffect(() => {
+    // Replace with your actual authentication check logic
+    const checkAuth = async () => {
+      // For now, a simple placeholder - replace with API call or context check
+      const userIsAuthenticated = false; // e.g., await checkUserSession();
+      setIsAuthenticated(userIsAuthenticated);
+
+      if (!userIsAuthenticated) {
+        toast({
+          title: 'Login Required',
+          description: 'Please login to proceed with checkout.',
+          variant: 'destructive',
+        });
+        router.push('/login'); // Redirect to login page
+      }
+    };
+
+    checkAuth();
+  }, [router, toast]); // Run this effect when router or toast changes
 
   const form = useForm<z.infer<typeof checkoutSchema>>({
     resolver: zodResolver(checkoutSchema),
@@ -55,12 +79,15 @@ export default function CheckoutPage() {
     clearCart();
     router.push('/');
   };
-  
-  if (state.items.length === 0) {
-    router.replace('/cart');
+
+  // Render null or a loading state while checking authentication
+  if (!isAuthenticated || state.items.length === 0) {
+     if (state.items.length === 0) {
+       router.replace('/cart');
+     }
     return null;
   }
-  
+
   const cartTotal = getCartTotal();
 
   return (
