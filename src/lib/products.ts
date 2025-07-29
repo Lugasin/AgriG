@@ -1,3 +1,4 @@
+
 import type { Product } from './types';
 
 const products: Product[] = [
@@ -6,7 +7,7 @@ const products: Product[] = [
     name: 'SynergyPower Workstation',
     description: 'A versatile and powerful workstation for all your business needs. Features a high-performance processor and ergonomic design.',
     price: 2500,
-    images: ['https://placehold.co/600x400', 'https://placehold.co/600x400'],
+    images: ['https://placehold.co/600x400?text=Workstation', 'https://placehold.co/600x400?text=Workstation+Context'],
     category: 'Office Hardware',
     specs: {
       'Processor': 'Intel Core i9',
@@ -20,7 +21,7 @@ const products: Product[] = [
     name: 'ConnectSphere Router',
     description: 'Maximize your network uptime with the ConnectSphere enterprise router. Advanced security features and high-throughput.',
     price: 800,
-    images: ['https://placehold.co/600x400', 'https://placehold.co/600x400'],
+    images: ['https://placehold.co/600x400?text=Router', 'https://placehold.co/600x400?text=Router+Context'],
     category: 'Networking',
     specs: {
       'Speed': 'Wi-Fi 6E (802.11ax)',
@@ -34,7 +35,7 @@ const products: Product[] = [
     name: 'InnovateHub Projector',
     description: 'Precision projection for crystal-clear presentations. Features 4K resolution and wireless connectivity.',
     price: 1500,
-    images: ['https://placehold.co/600x400', 'https://placehold.co/600x400'],
+    images: ['https://placehold.co/600x400?text=Projector', 'https://placehold.co/600x400?text=Projector+Context'],
     category: 'AV Equipment',
     specs: {
       'Resolution': '4K UHD (3840x2160)',
@@ -48,7 +49,7 @@ const products: Product[] = [
     name: 'DataSafe Backup System',
     description: 'Reliably protect your critical data with our automated backup solution. Scalable and secure.',
     price: 3000,
-    images: ['https://placehold.co/600x400', 'https://placehold.co/600x400'],
+    images: ['https://placehold.co/600x400?text=Backup+System', 'https://placehold.co/600x400?text=Backup+Context'],
     category: 'Data Storage',
     specs: {
       'Capacity': '24TB (Expandable)',
@@ -58,11 +59,11 @@ const products: Product[] = [
     },
   },
   {
-    id: 'PROD-500',
+    id: 'PROD-5000',
     name: 'AgilePro Wireless Mouse',
     description: 'Perfect for mobile professionals and clean desk setups. Ergonomic and precise.',
     price: 80,
-    images: ['https://placehold.co/600x400', 'https://placehold.co/600x400'],
+    images: ['https://placehold.co/600x400?text=Mouse', 'https://placehold.co/600x400?text=Mouse+Context'],
     category: 'Peripherals',
     specs: {
       'Connectivity': 'Bluetooth 5.2, 2.4GHz RF',
@@ -76,7 +77,7 @@ const products: Product[] = [
     name: 'SecureScan Office Printer',
     description: 'High-speed multifunction printer with advanced security features to protect your documents.',
     price: 1200,
-    images: ['https://placehold.co/600x400', 'https://placehold.co/600x400'],
+    images: ['https://placehold.co/600x400?text=Printer', 'https://placehold.co/600x400?text=Printer+Context'],
     category: 'Office Hardware',
     specs: {
       'Functions': 'Print, Scan, Copy, Fax',
@@ -90,7 +91,7 @@ const products: Product[] = [
     name: 'CloudFlow SaaS Suite',
     description: 'A robust suite of cloud-based applications for project management, CRM, and collaboration.',
     price: 99,
-    images: ['https://placehold.co/600x400', 'https://placehold.co/600x400'],
+    images: ['https://placehold.co/600x400?text=Software+Suite', 'https://placehold.co/600x400?text=Software+Context'],
     category: 'Software',
     specs: {
       'Billing': 'Per User / Per Month',
@@ -104,7 +105,7 @@ const products: Product[] = [
     name: 'TelePresence Conference Cam',
     description: 'Create an immersive meeting experience with our AI-powered 4K conference camera.',
     price: 950,
-    images: ['https://placehold.co/600x400', 'https://placehold.co/600x400'],
+    images: ['https://placehold.co/600x400?text=Conference+Cam', 'https://placehold.co/600x400?text=Cam+Context'],
     category: 'AV Equipment',
     specs: {
       'Resolution': '4K Ultra HD',
