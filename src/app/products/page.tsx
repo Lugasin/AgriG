@@ -10,15 +10,15 @@ export default function ProductsPage() {
       <div className="relative rounded-lg overflow-hidden mb-12 h-64 flex items-center justify-center text-center p-4">
         <Image 
           src="https://placehold.co/1200x400" 
-          alt="Tractor plowing a field" 
+          alt="Abstract background image" 
           fill 
           className="object-cover"
-          data-ai-hint="tractor plowing"
+          data-ai-hint="abstract background"
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative">
-          <h1 className="font-headline text-4xl md:text-5xl font-bold text-white text-shadow-lg">Our Equipment Catalog</h1>
-          <p className="mt-2 text-lg text-white/90 text-shadow">The finest tools for the modern farmer.</p>
+          <h1 className="font-headline text-4xl md:text-5xl font-bold text-white text-shadow-lg">Our Product Catalog</h1>
+          <p className="mt-2 text-lg text-white/90 text-shadow">The finest products for your business.</p>
         </div>
       </div>
       

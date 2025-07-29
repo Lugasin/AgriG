@@ -20,7 +20,7 @@ export function CartIcon() {
         <div className="relative">
           <ShoppingCart className="h-6 w-6" />
           {itemCount > 0 && (
-            <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-accent text-accent-foreground text-xs font-bold">
+            <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs font-bold">
               {itemCount}
             </span>
           )}

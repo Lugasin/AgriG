@@ -19,26 +19,26 @@ export default function Home() {
   const carouselItems = [
     {
       src: 'https://placehold.co/1600x800',
-      'data-ai-hint': 'combine harvester',
-      alt: 'Combine harvester in a golden field',
-      title: 'Power & Precision',
-      subtitle: 'Explore our range of high-performance combine harvesters.',
+      'data-ai-hint': 'modern office interior',
+      alt: 'Modern office interior',
+      title: 'Innovative Solutions',
+      subtitle: 'Driving progress with cutting-edge technology.',
       href: '/products',
     },
     {
       src: 'https://placehold.co/1600x800',
-      'data-ai-hint': 'planters sowing seeds',
-      alt: 'Planters sowing seeds in a field',
-      title: 'Sow the Future',
-      subtitle: 'Achieve perfect planting with our advanced seeders.',
+      'data-ai-hint': 'team collaborating meeting',
+      alt: 'Team collaborating in a meeting',
+      title: 'Expert Collaboration',
+      subtitle: 'Partner with us to achieve your business goals.',
       href: '/products',
     },
     {
       src: 'https://placehold.co/1600x800',
-      'data-ai-hint': 'irrigation system aerial',
-      alt: 'Aerial shot of a pivot irrigation system',
-      title: 'Efficient Irrigation',
-      subtitle: 'Maximize your yield with our smart watering solutions.',
+      'data-ai-hint': 'cityscape at dusk',
+      alt: 'Cityscape at dusk',
+      title: 'Global Reach',
+      subtitle: 'Expanding horizons with our worldwide presence.',
       href: '/products',
     },
   ];
@@ -81,10 +81,10 @@ export default function Home() {
       <section className="container mx-auto px-4">
         <div className="text-center">
           <h2 className="font-headline text-3xl md:text-4xl font-bold">
-            Featured Equipment
+            Featured Products
           </h2>
           <p className="mt-2 text-lg text-muted-foreground">
-            Top-tier machinery to elevate your farming operations.
+            Top-tier products to elevate your business.
           </p>
         </div>
 

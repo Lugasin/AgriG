@@ -35,7 +35,7 @@ export function ProductCard({ product }: ProductCardProps) {
               fill
               className="object-cover transition-opacity duration-300 group-hover:opacity-0"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-              data-ai-hint="tractor"
+              data-ai-hint="product image"
             />
             <Image
               src={product.images[1]}
@@ -43,7 +43,7 @@ export function ProductCard({ product }: ProductCardProps) {
               fill
               className="object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-              data-ai-hint="farm"
+              data-ai-hint="product context"
             />
           </div>
         </Link>

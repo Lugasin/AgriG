@@ -87,7 +87,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                 <Plus className="h-4 w-4" />
               </Button>
             </div>
-            <Button size="lg" onClick={handleAddToCart} className="flex-grow bg-accent hover:bg-accent/90">
+            <Button size="lg" onClick={handleAddToCart} className="flex-grow">
               <ShoppingCart className="mr-2 h-5 w-5" />
               Add to Cart
             </Button>

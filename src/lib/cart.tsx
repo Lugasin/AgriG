@@ -62,7 +62,7 @@ const getInitialState = (): CartState => {
       return { items: [] };
     }
     try {
-      const storedCart = localStorage.getItem('agriGoCart');
+      const storedCart = localStorage.getItem('massridesCart');
       return storedCart ? JSON.parse(storedCart) : { items: [] };
     } catch (error) {
       console.error("Failed to parse cart from localStorage", error);
@@ -80,7 +80,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     try {
-      localStorage.setItem('agriGoCart', JSON.stringify(state));
+      localStorage.setItem('massridesCart', JSON.stringify(state));
     } catch (error) {
       console.error("Failed to save cart to localStorage", error);
     }

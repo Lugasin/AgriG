@@ -5,10 +5,9 @@ import Link from 'next/link';
 import { useCart } from '@/lib/cart';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Minus, Plus, Trash2, ArrowRight } from 'lucide-react';
+import { Minus, Plus, Trash2, ArrowRight, ShoppingBag } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { CartTractorIcon } from '@/components/icons/CartTractorIcon';
 
 export default function CartPage() {
   const { state, updateQuantity, removeItem, getCartTotal, getItemCount } = useCart();
@@ -18,9 +17,9 @@ export default function CartPage() {
   if (itemCount === 0) {
     return (
       <div className="container mx-auto px-4 py-24 flex flex-col items-center justify-center text-center">
-        <CartTractorIcon className="h-24 w-24 text-muted-foreground mb-4" />
+        <ShoppingBag className="h-24 w-24 text-muted-foreground mb-4" />
         <h1 className="font-headline text-3xl font-bold">Your Cart is Empty</h1>
-        <p className="mt-2 text-lg text-muted-foreground">Looks like you haven't added any equipment yet.</p>
+        <p className="mt-2 text-lg text-muted-foreground">Looks like you haven't added anything yet.</p>
         <Button asChild className="mt-6" size="lg">
           <Link href="/products">Start Shopping</Link>
         </Button>
@@ -84,7 +83,7 @@ export default function CartPage() {
               </div>
             </CardContent>
             <CardFooter>
-              <Button asChild size="lg" className="w-full bg-accent hover:bg-accent/90">
+              <Button asChild size="lg" className="w-full">
                 <Link href="/checkout">
                   Proceed to Checkout <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>

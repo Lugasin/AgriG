@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { TractorIcon } from '../icons/TractorIcon';
+import { MountainIcon } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -7,8 +7,8 @@ export function Footer() {
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="flex items-center gap-2 mb-4 md:mb-0">
-            <TractorIcon className="h-8 w-8 text-primary" />
-            <span className="font-headline text-2xl font-bold">AgriGo</span>
+            <MountainIcon className="h-8 w-8 text-primary" />
+            <span className="font-headline text-2xl font-bold">Massrides</span>
           </div>
           <nav className="flex gap-6 text-sm text-muted-foreground">
             <Link href="/" className="hover:text-foreground">Home</Link>
@@ -17,7 +17,7 @@ export function Footer() {
           </nav>
         </div>
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} AgriGo. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Massrides. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

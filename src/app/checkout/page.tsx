@@ -137,7 +137,7 @@ export default function CheckoutPage() {
                 </div>
               </CardContent>
               <CardFooter>
-                <Button type="submit" size="lg" className="w-full bg-accent hover:bg-accent/90">
+                <Button type="submit" size="lg" className="w-full">
                   Place Order
                 </Button>
               </CardFooter>
