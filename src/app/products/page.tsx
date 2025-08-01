@@ -2,7 +2,7 @@ import { getProducts } from '@/lib/products';
 import { ProductCard } from '@/components/products/ProductCard'; // You might not need this anymore if using FilterableGallery
 import Image from 'next/image';
 import LocalAds from '@/components/ui/LocalAds';
-import { FilterableGallery } from '@/components/products/FilterableGallery'; // Import the new component
+import FilterableGallery from '@/components/products/FilterableGallery'; // Changed to default import
 
 
 export default function ProductsPage() {
@@ -10,8 +10,8 @@ export default function ProductsPage() {
 
    // Placeholder ad data - replace with actual data fetching
   const productsPageAds = [
-    { id: 'ad-3', title: 'Special Offer on Tractors!', description: 'Get financing options on all new tractors.', imageUrl: '/path/to/tractor-finance-ad.jpg', linkUrl: '/products?category=Heavy Machinery' },
-    { id: 'ad-4', title: 'Save on Irrigation', description: 'Discounts on drip irrigation systems this month.', imageUrl: '/path/to/irrigation-ad.jpg', linkUrl: '/products?category=Irrigation' },
+    { id: 'ad-3', title: 'Special Offer on Tractors!', description: 'Get financing options on all new tractors.', imageUrl: '/src/Assets/Newtractors.png', linkUrl: '/products?category=Heavy Machinery' }, // Updated image URL
+    { id: 'ad-4', title: 'Save on Irrigation', description: 'Discounts on drip irrigation systems this month.', imageUrl: '/src/Assets/Sprinklers.png', linkUrl: '/products?category=Irrigation' }, // Updated image URL
   ];
 
   return (

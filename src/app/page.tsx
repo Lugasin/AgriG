@@ -21,6 +21,16 @@ export default function Home() {
       <HomeCarousel />
 
       <section className="container mx-auto px-4">
+        {/* Added illustrative image */}
+        <div className="relative w-full h-72 mb-8 rounded-lg overflow-hidden">
+           <Image 
+             src="/src/Assets/top-view-tractors-doing-harvest-field.jpg"
+             alt="Top view of tractors working in a field"
+             fill
+             className="object-cover"
+           />
+        </div>
+
         <div className="text-center animate-fade-in-up">
           <h2 className="font-headline text-3xl md:text-4xl font-bold">
             Featured Equipment

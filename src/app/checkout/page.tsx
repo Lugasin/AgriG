@@ -19,11 +19,11 @@ const checkoutSchema = z.object({
   address: z.string().min(5, { message: "Address is required." }),
   city: z.string().min(2, { message: "City is required." }),
   state: z.string().min(2, { message: "State is required." }),
-  zip: z.string().regex(/^d{5}$/, { message: "Invalid ZIP code." }),
+  zip: z.string().regex(/^\d{5}$/, { message: "Invalid ZIP code." }),
   cardName: z.string().min(2, { message: "Name on card is required." }),
-  cardNumber: z.string().regex(/^d{16}$/, { message: "Invalid card number." }),
-  cardExp: z.string().regex(/^(0[1-9]|1[0-2])/d{2}$/, { message: "Invalid format (MM/YY)." }),
-  cardCvc: z.string().regex(/^d{3,4}$/, { message: "Invalid CVC." }),
+  cardNumber: z.string().regex(/^\d{16}$/, { message: "Invalid card number." }),
+  cardExp: z.string().regex(/^(0[1-9]|1[0-2])\/\d{2}$/, { message: "Invalid format (MM/YY)." }),
+  cardCvc: z.string().regex(/^\d{3,4}$/, { message: "Invalid CVC." }),
 });
 
 export default function CheckoutPage() {

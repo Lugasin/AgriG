@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useMemo } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 import Image from 'next/image';
@@ -44,9 +46,11 @@ export function FilterableGallery({ machines }: FilterableGalleryProps) {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filtered.map((m) => (
-          <QuickPeekCard key={m.id} machine={m} /> {/* Use QuickPeekCard here */}
+          <QuickPeekCard key={m.id} machine={m} /> /* Use QuickPeekCard here */
         ))}
       </div>
     </div>
   );
 }
+
+export default FilterableGallery; // Added default export

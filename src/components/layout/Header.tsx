@@ -79,7 +79,7 @@ export function Header() {
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               <DropdownMenuItem asChild>
-                <Link href="/profile">Profile</Link> {/* Added Profile link */}
+                <Link href="/profile">Profile</Link>
               </DropdownMenuItem>
               <DropdownMenuItem asChild>
                 <Link href="/login">Login</Link>

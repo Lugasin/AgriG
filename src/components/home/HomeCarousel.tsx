@@ -59,20 +59,23 @@ export function HomeCarousel() {
           }),
         ]}
       >
-        <CarouselContent className="h-full">
+        <CarouselContent className="h-full flex"> {/* Added flex class */}
           {carouselItems.map((item, index) => (
             <CarouselItem key={index} className="relative h-full">
-              <Image
-                src={item.src}
-                alt={item.alt}
-                fill
-                className="object-cover animate-kenburns"
-                data-ai-hint={item['data-ai-hint']}
-                priority={index === 0}
-              />
+              {/* Parent of Image - Added explicit height */}
+              <div className="relative h-full h-56"> 
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  className="object-cover animate-kenburns"
+                  data-ai-hint={item['data-ai-hint']}
+                  priority={index === 0}
+                />
+              </div>
               <div className="absolute inset-0 bg-green-950/50" />
               <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-4 animate-fade-in-up">
-                <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-shadow-lg">
+                <h1 className="font-headline text-4xl md:text-6xl lg::text-7xl font-bold tracking-tight text-shadow-lg">
                   {item.title}
                 </h1>
                 <p className="mt-4 max-w-2xl text-lg md::text-xl text-shadow">
