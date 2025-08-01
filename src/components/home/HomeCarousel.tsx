@@ -23,7 +23,7 @@ export function HomeCarousel() {
       href: '/products',
     },
     {
-      src: '/src/Assets/tractor-working-green-field.jpg',
+      src: '/src/Assets/Tractors.jpg',
       'data-ai-hint': 'tractor working green field',
       alt: 'Tractor working in a green field',
       title: 'Reliable Tractors for Every Task',

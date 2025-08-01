@@ -6,7 +6,7 @@ const products: Product[] = [
     name: 'GreenHarv 4000 Tractor',
     description: 'A robust and versatile tractor designed for medium to large-scale farms. Features a powerful engine and advanced GPS guidance.',
     price: 75000,
-    images: ['https://placehold.co/600x400', 'https://placehold.co/600x400'],
+    images: ['/src/Assets/Newtractor.png', '/src/Assets/Newtractor1.png'],
     category: 'Heavy Machinery',
     specs: {
       'Engine Power': '150 HP',
@@ -20,7 +20,7 @@ const products: Product[] = [
     name: 'AquaFlow Drip Irrigation Kit',
     description: 'Maximize water efficiency with this complete drip irrigation system for a 1-acre plot. Easy to install and maintain.',
     price: 1200,
-    images: ['https://placehold.co/600x400', 'https://placehold.co/600x400'],
+    images: ['/src/Assets/Sprinklers.png', '/src/Assets/Sprinklers1.png'],
     category: 'Irrigation',
     specs: {
       'Coverage': '1 Acre',
@@ -34,7 +34,7 @@ const products: Product[] = [
     name: 'YieldMax Combine Harvester',
     description: 'High-capacity combine harvester that delivers exceptional grain quality with minimal loss. Suitable for various crops.',
     price: 250000,
-    images: ['https://placehold.co/600x400', 'https://placehold.co/600x400'],
+    images: ['/src/Assets/Harverster.jpg', '/src/Assets/Combine.jpg'],
     category: 'Harvesting Equipment',
     specs: {
       'Header Width': '7.5 meters',
@@ -48,7 +48,7 @@ const products: Product[] = [
     name: 'SoilGuard Precision Planter',
     description: 'Achieve perfect seed placement and spacing with our advanced planter. Reduces seed waste and improves germination rates.',
     price: 45000,
-    images: ['https://placehold.co/600x400', 'https://placehold.co/600x400'],
+    images: ['/src/Assets/Plough.png', '/src/Assets/Ploughs.png'],
     category: 'Planting Equipment',
     specs: {
       'Row Units': '8-Row',
@@ -62,7 +62,7 @@ const products: Product[] = [
     name: 'Agri-Boost Organic Fertilizer',
     description: 'A nutrient-rich organic fertilizer that improves soil health and boosts crop yields. Certified for organic farming.',
     price: 50,
-    images: ['https://placehold.co/600x400', 'https://placehold.co/600x400'],
+    images: ['/src/Assets/Tractorsspraying.jpg.png', '/src/Assets/Tractorplouging1.png'],
     category: 'Supplies',
     specs: {
       'Package Size': '20 kg Bag',
@@ -76,7 +76,7 @@ const products: Product[] = [
     name: 'PestAway Eco-Friendly Insecticide',
     description: 'Control a wide range of pests without harming beneficial insects or the environment. Safe for use up to harvest day.',
     price: 75,
-    images: ['https://placehold.co/600x400', 'https://placehold.co/600x400'],
+    images: ['/src/Assets/Dronesprayer.png', '/src/Assets/Tractorsspraying.jpg.png'],
     category: 'Supplies',
     specs: {
       'Volume': '1 Liter Concentrate',
@@ -90,7 +90,7 @@ const products: Product[] = [
     name: 'CropHealth Drone Sprayer',
     description: 'Apply treatments with precision using this autonomous drone sprayer. Covers large areas quickly and efficiently.',
     price: 15000,
-    images: ['https://placehold.co/600x400', 'https://placehold.co/600x400'],
+    images: ['/src/Assets/Dronesprayer.png', '/src/Assets/Sprinklers.png'],
     category: 'Precision Ag',
     specs: {
       'Tank Capacity': '10 Liters',
@@ -104,7 +104,7 @@ const products: Product[] = [
     name: 'Multi-Crop Seed Pack',
     description: 'A variety pack of high-yield, disease-resistant seeds for staple crops like corn, wheat, and soybeans.',
     price: 120,
-    images: ['https://placehold.co/600x400', 'https://placehold.co/600x400'],
+    images: ['/src/Assets/close-up-seeder-attached-tractor-field.jpg', '/src/Assets/new-red-agricultural-seeder-close-up-view-background-combine.jpg'],
     category: 'Supplies',
     specs: {
       'Contains': 'Corn, Wheat, Soybean seeds',

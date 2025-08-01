@@ -13,7 +13,7 @@ export default function AboutUsPage() {
 
       <section className="relative h-96 w-full rounded-lg overflow-hidden mb-16">
         <Image
-          src="https://placehold.co/1600x600"
+          src="/src/Assets/large-green-rice-field-with-green-rice-plants-rows.jpg"
           alt="Lush green field with a tractor in the distance"
           fill
           className="object-cover animate-parallax"
@@ -50,16 +50,16 @@ export default function AboutUsPage() {
         <h2 className="font-headline text-4xl font-bold">Meet the Founders</h2>
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <div className="p-6">
-            <Image src="https://placehold.co/400x400" alt="Founder 1" width={150} height={150} className="rounded-full mx-auto mb-4" data-ai-hint="portrait man" />
+            <Image src="/src/Assets/Newtractor8.png" alt="Founder 1" width={150} height={150} className="rounded-full mx-auto mb-4" data-ai-hint="portrait man" />
             <h3 className="font-headline text-2xl font-semibold">John Farmer</h3>
             <p className="text-primary font-medium">Co-Founder & CEO</p>
             <p className="mt-2 text-muted-foreground">With a lifetime of experience in farming, John is passionate about bringing cutting-edge technology to the agricultural sector.</p>
           </div>
           <div className="p-6">
-            <Image src="https://placehold.co/400x400" alt="Founder 2" width={150} height={150} className="rounded-full mx-auto mb-4" data-ai-hint="portrait woman" />
+            <Image src="/src/Assets/Newtractor9.png" alt="Founder 2" width={150} height={150} className="rounded-full mx-auto mb-4" data-ai-hint="portrait woman" />
             <h3 className="font-headline text-2xl font-semibold">Jane Agronomist</h3>
             <p className="text-primary font-medium">Co-Founder & CTO</p>
-            <p className="mt-2 text-muted-foreground">Jane's expertise in soil science and crop management drives our commitment to sustainable and efficient farming solutions.</p>
+            <p className="mt-2 text-muted-foreground">Jane&apos;s expertise in soil science and crop management drives our commitment to sustainable and efficient farming solutions.</p>
           </div>
         </div>
       </section>
