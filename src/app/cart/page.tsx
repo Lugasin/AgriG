@@ -19,7 +19,7 @@ export default function CartPage() {
       <div className="container mx-auto px-4 py-24 flex flex-col items-center justify-center text-center">
         <ShoppingBag className="h-24 w-24 text-muted-foreground mb-4" />
         <h1 className="font-headline text-3xl font-bold">Your Cart is Empty</h1>
-        <p className="mt-2 text-lg text-muted-foreground">Looks like you haven't added anything yet.</p>
+        <p className="mt-2 text-lg text-muted-foreground">Looks like you haven&apos;t added anything yet.</p>
         <Button asChild className="mt-6" size="lg">
           <Link href="/products">Start Shopping</Link>
         </Button>

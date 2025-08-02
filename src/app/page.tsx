@@ -12,8 +12,8 @@ export default function Home() {
 
   // Placeholder ad data - replace with actual data fetching
   const homepageAds = [
-    { id: 'ad-1', title: 'Spring Planting Sale!', description: 'Get discounts on all planters and seeds.', imageUrl: '/path/to/spring-ad.jpg', linkUrl: '/products?category=Planting Equipment' },
-    { id: 'ad-2', title: 'Free Consultations', description: 'Schedule a free consultation with our farming experts.', imageUrl: '/path/to/consult-ad.jpg', linkUrl: '/contact' },
+    { id: 'ad-1', title: 'Spring Planting Sale!', description: 'Get discounts on all planters and seeds.', imageUrl: '/src/Assets/Sprinklers.png', linkUrl: '/products?category=Planting Equipment' },
+    { id: 'ad-2', title: 'Free Consultations', description: 'Schedule a free consultation with our farming experts.', imageUrl: '/src/Assets/Tractors.jpg', linkUrl: '/contact' },
   ];
 
   return (
@@ -24,7 +24,7 @@ export default function Home() {
         {/* Added illustrative image */}
         <div className="relative w-full h-72 mb-8 rounded-lg overflow-hidden">
            <Image 
-             src="/src/Assets/top-view-tractors-doing-harvest-field.jpg"
+             src="/src/Assets/combine-harvester-working-field.jpg"
              alt="Top view of tractors working in a field"
              fill
              className="object-cover"

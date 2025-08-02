@@ -25,7 +25,7 @@ export default async function SearchPage({ searchParams }: { searchParams: { que
     <div className="container mx-auto px-4 py-12">
       <div className="text-center mb-12">
         <h1 className="font-headline text-4xl font-bold">Search Results</h1>
-        {query && <p className="mt-2 text-lg text-muted-foreground">Showing results for: "{query}"</p>}
+        {query && <p className="mt-2 text-lg text-muted-foreground">Showing results for: &quot;{query}&quot;</p>}
       </div>
 
       {products.length > 0 ? (
