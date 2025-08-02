@@ -23,9 +23,12 @@ export function Header() {
 
   const navItems = [
     { href: '/', label: 'Home' },
-    { href: '/products', label: 'Catalog' }, // Renamed from Products to Catalog
+    { href: '/products', label: 'Products' },
+    { href: '/catalog', label: 'Catalog' },
     { href: '/about', label: 'About Us' },
-    { href: '/checkout', label: 'Checkout' }, // Added Checkout link
+    { href: '/ads', label: 'Ads' },
+    { href: '/contact', label: 'Contact' },
+    { href: '/checkout', label: 'Checkout' },
   ];
 
   const handleSearch = (e: FormEvent<HTMLFormElement>) => {
