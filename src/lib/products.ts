@@ -1,4 +1,5 @@
 import type { Product } from './types';
+import { catalogProducts } from './catalog-products';
 
 const products: Product[] = [
   {
@@ -115,13 +116,15 @@ const products: Product[] = [
   },
 ];
 
+const allProducts = [...products, ...catalogProducts];
+
 export function getProducts(category?: string): Product[] {
   if (category) {
-    return products.filter((p) => p.category === category);
+    return allProducts.filter((p) => p.category === category);
   }
-  return products;
+  return allProducts;
 }
 
 export function getProductById(id: string): Product | undefined {
-  return products.find((p) => p.id === id);
+  return allProducts.find((p) => p.id === id);
 }
